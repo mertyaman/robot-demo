@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170530 13:30:40.503" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/mert.yaman/Downloads/WebDemo/login_tests" id="s1" name="Login Tests">
+<suite source="/Users/mert.yaman/Downloads/WebDemo/login_tests/gherkin_login.robot" id="s1-s1" name="Gherkin Login">
+<test id="s1-s1-t1" name="Valid Login">
+<kw name="Given browser is opened to login page">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:40.663" level="INFO">Opening browser 'Chrome' to base url 'https://www.bilyoner.com/'</msg>
+<status status="PASS" endtime="20170530 13:30:44.910" starttime="20170530 13:30:40.663"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170530 13:30:45.475" starttime="20170530 13:30:44.911"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:45.475" starttime="20170530 13:30:45.475"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı</arg>
+</arguments>
+<msg timestamp="20170530 13:30:45.481" level="INFO">Page title is 'Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı'.</msg>
+<status status="PASS" endtime="20170530 13:30:45.481" starttime="20170530 13:30:45.476"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:45.481" starttime="20170530 13:30:45.476"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:45.481" starttime="20170530 13:30:40.662"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:45.481" starttime="20170530 13:30:40.662"></status>
+</kw>
+<kw name="When user &quot;15787600&quot; logs in with password &quot;987123&quot;">
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:45.525" starttime="20170530 13:30:45.482"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:45.525" level="INFO">Typing text '15787600' into text field 'css=.qa-input-userid'</msg>
+<status status="PASS" endtime="20170530 13:30:45.660" starttime="20170530 13:30:45.525"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:45.661" starttime="20170530 13:30:45.482"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:45.661" level="INFO">Typing text '987123' into text field 'css=.qa-input-password'</msg>
+<status status="PASS" endtime="20170530 13:30:45.752" starttime="20170530 13:30:45.661"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:45.753" starttime="20170530 13:30:45.661"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=.btn.qa-button-login</arg>
+</arguments>
+<msg timestamp="20170530 13:30:45.753" level="INFO">Clicking button 'css=.btn.qa-button-login'.</msg>
+<status status="PASS" endtime="20170530 13:30:45.839" starttime="20170530 13:30:45.753"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:45.839" starttime="20170530 13:30:45.753"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:45.839" starttime="20170530 13:30:45.482"></status>
+</kw>
+<kw name="Then Username should be visible" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__name.qa-username</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:46.091" starttime="20170530 13:30:45.840"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__name.qa-username</arg>
+</arguments>
+<msg timestamp="20170530 13:30:46.091" level="INFO">Verifying element 'css=.user-panel__name.qa-username' is visible.</msg>
+<status status="PASS" endtime="20170530 13:30:46.104" starttime="20170530 13:30:46.091"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:46.104" starttime="20170530 13:30:45.839"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170530 13:30:46.205" starttime="20170530 13:30:46.104"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:46.205" critical="yes" starttime="20170530 13:30:40.661"></status>
+</test>
+<doc>A test suite with a single Gherkin style test.
+
+This test is functionally identical to the example in
+valid_login.robot file.</doc>
+<status status="PASS" endtime="20170530 13:30:46.206" starttime="20170530 13:30:40.532"></status>
+</suite>
+<suite source="/Users/mert.yaman/Downloads/WebDemo/login_tests/invalid_login.robot" id="s1-s2" name="Invalid Login">
+<kw type="setup" name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:46.215" level="INFO">Opening browser 'Chrome' to base url 'https://www.bilyoner.com/'</msg>
+<status status="PASS" endtime="20170530 13:30:50.460" starttime="20170530 13:30:46.215"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170530 13:30:51.130" starttime="20170530 13:30:50.461"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:51.131" starttime="20170530 13:30:51.130"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı</arg>
+</arguments>
+<msg timestamp="20170530 13:30:51.138" level="INFO">Page title is 'Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı'.</msg>
+<status status="PASS" endtime="20170530 13:30:51.138" starttime="20170530 13:30:51.132"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:51.138" starttime="20170530 13:30:51.131"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:51.139" starttime="20170530 13:30:46.215"></status>
+</kw>
+<test id="s1-s2-t1" name="Invalid Username">
+<kw type="setup" name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:51.140" level="INFO">Opening url 'https://www.bilyoner.com/'</msg>
+<status status="PASS" endtime="20170530 13:30:52.016" starttime="20170530 13:30:51.140"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı</arg>
+</arguments>
+<msg timestamp="20170530 13:30:52.106" level="INFO">Page title is 'Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı'.</msg>
+<status status="PASS" endtime="20170530 13:30:52.106" starttime="20170530 13:30:52.017"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:52.107" starttime="20170530 13:30:52.017"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:52.107" starttime="20170530 13:30:51.139"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>invalid</arg>
+<arg>${VALID PASSWORD}</arg>
+</arguments>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:52.159" starttime="20170530 13:30:52.110"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:52.160" level="INFO">Typing text 'invalid' into text field 'css=.qa-input-userid'</msg>
+<status status="PASS" endtime="20170530 13:30:52.303" starttime="20170530 13:30:52.159"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:52.303" starttime="20170530 13:30:52.108"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:52.304" level="INFO">Typing text '987123' into text field 'css=.qa-input-password'</msg>
+<status status="PASS" endtime="20170530 13:30:52.453" starttime="20170530 13:30:52.304"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:52.454" starttime="20170530 13:30:52.303"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=.btn.qa-button-login</arg>
+</arguments>
+<msg timestamp="20170530 13:30:52.454" level="INFO">Clicking button 'css=.btn.qa-button-login'.</msg>
+<status status="PASS" endtime="20170530 13:30:52.549" starttime="20170530 13:30:52.454"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:52.549" starttime="20170530 13:30:52.454"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ERROR URL}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:52.554" level="INFO">Current location is 'https://www.bilyoner.com/'.</msg>
+<status status="PASS" endtime="20170530 13:30:52.554" starttime="20170530 13:30:52.549"></status>
+</kw>
+<kw name="Error message should be visible" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__error</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:52.804" starttime="20170530 13:30:52.555"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__error</arg>
+</arguments>
+<msg timestamp="20170530 13:30:52.804" level="INFO">Verifying element 'css=.user-panel__error' is visible.</msg>
+<status status="PASS" endtime="20170530 13:30:52.817" starttime="20170530 13:30:52.804"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:52.818" starttime="20170530 13:30:52.554"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:52.818" starttime="20170530 13:30:52.549"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:52.818" starttime="20170530 13:30:52.107"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:52.818" critical="yes" starttime="20170530 13:30:51.139"></status>
+</test>
+<test id="s1-s2-t2" name="Invalid Password">
+<kw type="setup" name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:52.820" level="INFO">Opening url 'https://www.bilyoner.com/'</msg>
+<status status="PASS" endtime="20170530 13:30:53.721" starttime="20170530 13:30:52.820"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı</arg>
+</arguments>
+<msg timestamp="20170530 13:30:53.726" level="INFO">Page title is 'Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı'.</msg>
+<status status="PASS" endtime="20170530 13:30:53.726" starttime="20170530 13:30:53.722"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:53.727" starttime="20170530 13:30:53.721"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:53.727" starttime="20170530 13:30:52.819"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${VALID USER}</arg>
+<arg>invalid</arg>
+</arguments>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:53.800" starttime="20170530 13:30:53.728"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:53.801" level="INFO">Typing text '15787600' into text field 'css=.qa-input-userid'</msg>
+<status status="PASS" endtime="20170530 13:30:53.914" starttime="20170530 13:30:53.801"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:53.914" starttime="20170530 13:30:53.727"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:53.915" level="INFO">Typing text 'invalid' into text field 'css=.qa-input-password'</msg>
+<status status="PASS" endtime="20170530 13:30:54.004" starttime="20170530 13:30:53.915"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:54.004" starttime="20170530 13:30:53.914"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=.btn.qa-button-login</arg>
+</arguments>
+<msg timestamp="20170530 13:30:54.005" level="INFO">Clicking button 'css=.btn.qa-button-login'.</msg>
+<status status="PASS" endtime="20170530 13:30:54.086" starttime="20170530 13:30:54.005"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:54.087" starttime="20170530 13:30:54.004"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ERROR URL}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:54.093" level="INFO">Current location is 'https://www.bilyoner.com/'.</msg>
+<status status="PASS" endtime="20170530 13:30:54.093" starttime="20170530 13:30:54.087"></status>
+</kw>
+<kw name="Error message should be visible" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__error</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:54.333" starttime="20170530 13:30:54.094"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__error</arg>
+</arguments>
+<msg timestamp="20170530 13:30:54.334" level="INFO">Verifying element 'css=.user-panel__error' is visible.</msg>
+<status status="PASS" endtime="20170530 13:30:54.347" starttime="20170530 13:30:54.333"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:54.347" starttime="20170530 13:30:54.093"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:54.347" starttime="20170530 13:30:54.087"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:54.347" starttime="20170530 13:30:53.727"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:54.347" critical="yes" starttime="20170530 13:30:52.819"></status>
+</test>
+<test id="s1-s2-t3" name="Invalid Username And Password">
+<kw type="setup" name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:54.349" level="INFO">Opening url 'https://www.bilyoner.com/'</msg>
+<status status="PASS" endtime="20170530 13:30:54.777" starttime="20170530 13:30:54.348"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı</arg>
+</arguments>
+<msg timestamp="20170530 13:30:55.180" level="INFO">Page title is 'Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı'.</msg>
+<status status="PASS" endtime="20170530 13:30:55.180" starttime="20170530 13:30:54.778"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:55.180" starttime="20170530 13:30:54.778"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:55.180" starttime="20170530 13:30:54.348"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>invalid</arg>
+<arg>whatever</arg>
+</arguments>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:55.230" starttime="20170530 13:30:55.181"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:55.231" level="INFO">Typing text 'invalid' into text field 'css=.qa-input-userid'</msg>
+<status status="PASS" endtime="20170530 13:30:55.343" starttime="20170530 13:30:55.231"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:55.343" starttime="20170530 13:30:55.181"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:55.344" level="INFO">Typing text 'whatever' into text field 'css=.qa-input-password'</msg>
+<status status="PASS" endtime="20170530 13:30:55.463" starttime="20170530 13:30:55.344"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:55.463" starttime="20170530 13:30:55.343"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=.btn.qa-button-login</arg>
+</arguments>
+<msg timestamp="20170530 13:30:55.464" level="INFO">Clicking button 'css=.btn.qa-button-login'.</msg>
+<status status="PASS" endtime="20170530 13:30:55.590" starttime="20170530 13:30:55.464"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:55.590" starttime="20170530 13:30:55.463"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ERROR URL}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:55.595" level="INFO">Current location is 'https://www.bilyoner.com/'.</msg>
+<status status="PASS" endtime="20170530 13:30:55.595" starttime="20170530 13:30:55.590"></status>
+</kw>
+<kw name="Error message should be visible" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__error</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:30:55.836" starttime="20170530 13:30:55.595"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__error</arg>
+</arguments>
+<msg timestamp="20170530 13:30:55.837" level="INFO">Verifying element 'css=.user-panel__error' is visible.</msg>
+<status status="PASS" endtime="20170530 13:30:55.849" starttime="20170530 13:30:55.836"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:55.849" starttime="20170530 13:30:55.595"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:55.850" starttime="20170530 13:30:55.590"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:55.850" starttime="20170530 13:30:55.180"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:30:55.850" critical="yes" starttime="20170530 13:30:54.348"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170530 13:30:55.938" starttime="20170530 13:30:55.851"></status>
+</kw>
+<doc>A test suite containing tests related to invalid login.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="PASS" endtime="20170530 13:30:55.938" starttime="20170530 13:30:46.209"></status>
+</suite>
+<suite source="/Users/mert.yaman/Downloads/WebDemo/login_tests/valid_login.robot" id="s1-s3" name="Valid Login">
+<test id="s1-s3-t1" name="Valid Login">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170530 13:30:55.956" starttime="20170530 13:30:55.955"></status>
+</kw>
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170530 13:30:55.958" level="INFO">Opening browser 'Chrome' to base url 'https://www.bilyoner.com/'</msg>
+<status status="PASS" endtime="20170530 13:31:00.067" starttime="20170530 13:30:55.957"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170530 13:31:00.679" starttime="20170530 13:31:00.067"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:31:00.680" starttime="20170530 13:31:00.680"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı</arg>
+</arguments>
+<msg timestamp="20170530 13:31:00.687" level="INFO">Page title is 'Bilyoner.com - İddaa | Spor Toto | Milli Piyango | At Yarışı'.</msg>
+<status status="PASS" endtime="20170530 13:31:00.688" starttime="20170530 13:31:00.680"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:31:00.688" starttime="20170530 13:31:00.680"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:31:00.688" starttime="20170530 13:30:55.956"></status>
+</kw>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>15787600</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:31:00.728" starttime="20170530 13:31:00.689"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-userid</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170530 13:31:00.729" level="INFO">Typing text '15787600' into text field 'css=.qa-input-userid'</msg>
+<status status="PASS" endtime="20170530 13:31:00.871" starttime="20170530 13:31:00.728"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:31:00.872" starttime="20170530 13:31:00.688"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>987123</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=.qa-input-password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170530 13:31:00.872" level="INFO">Typing text '987123' into text field 'css=.qa-input-password'</msg>
+<status status="PASS" endtime="20170530 13:31:00.971" starttime="20170530 13:31:00.872"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:31:00.971" starttime="20170530 13:31:00.872"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=.btn.qa-button-login</arg>
+</arguments>
+<msg timestamp="20170530 13:31:00.972" level="INFO">Clicking button 'css=.btn.qa-button-login'.</msg>
+<status status="PASS" endtime="20170530 13:31:01.059" starttime="20170530 13:31:00.972"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:31:01.059" starttime="20170530 13:31:00.971"></status>
+</kw>
+<kw name="Username should be visible" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__name.qa-username</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20170530 13:31:02.456" starttime="20170530 13:31:01.060"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>css=.user-panel__name.qa-username</arg>
+</arguments>
+<msg timestamp="20170530 13:31:02.457" level="INFO">Verifying element 'css=.user-panel__name.qa-username' is visible.</msg>
+<status status="PASS" endtime="20170530 13:31:02.473" starttime="20170530 13:31:02.457"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:31:02.473" starttime="20170530 13:31:01.060"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170530 13:31:02.584" starttime="20170530 13:31:02.474"></status>
+</kw>
+<status status="PASS" endtime="20170530 13:31:02.584" critical="yes" starttime="20170530 13:30:55.954"></status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" endtime="20170530 13:31:02.586" starttime="20170530 13:30:55.942"></status>
+</suite>
+<status status="PASS" endtime="20170530 13:31:02.589" starttime="20170530 13:30:40.505"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login Tests" pass="5">Login Tests</stat>
+<stat fail="0" id="s1-s1" name="Gherkin Login" pass="1">Login Tests.Gherkin Login</stat>
+<stat fail="0" id="s1-s2" name="Invalid Login" pass="3">Login Tests.Invalid Login</stat>
+<stat fail="0" id="s1-s3" name="Valid Login" pass="1">Login Tests.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
